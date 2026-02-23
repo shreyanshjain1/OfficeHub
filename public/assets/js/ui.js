@@ -1,0 +1,1 @@
+(function(){function toast(msg){const el=document.getElementById('appToast');const body=document.getElementById('appToastBody');if(!el||!body)return;body.textContent=msg;const t=bootstrap.Toast.getOrCreateInstance(el,{delay:3500});t.show()}window.UI={toast};if(window.__FLASH_TOAST__&&window.__FLASH_TOAST__.length){toast(window.__FLASH_TOAST__)}})();
