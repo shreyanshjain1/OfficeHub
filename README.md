@@ -1,4 +1,4 @@
-# Office Request Hub (Option A: Procedural PHP + MySQL + Bootstrap 5 + Vanilla JS)
+# Office Request Hub (Procedural PHP + MySQL + Bootstrap 5 + Vanilla JS)
 
 A production-ready internal web app for IT/Supplies/Office requests with attachments, approvals, assignments, status lifecycle, and an audit trail.
 
