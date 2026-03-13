@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 require_once __DIR__ . '/config.php';
@@ -11,6 +12,7 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/validator.php';
 require_once __DIR__ . '/policies.php';
 require_once __DIR__ . '/uploads.php';
+require_once __DIR__ . '/helpers.php';
 
 Security::applySecurityHeaders();
 Security::startAppSession();
