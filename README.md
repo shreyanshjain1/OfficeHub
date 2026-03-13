@@ -1,4 +1,4 @@
-# Office Request Hub (Option A: Procedural PHP + MySQL + Bootstrap 5 + Vanilla JS)
+# Office Request Hub (Procedural PHP + MySQL + Bootstrap 5 + Vanilla JS)
 
 A production-ready internal web app for IT/Supplies/Office requests with attachments, approvals, assignments, status lifecycle, and an audit trail.
 
@@ -260,37 +260,3 @@ From project root:
 
 ---
 
-# Security Evidence Pack (screenshots to capture)
-1) DevTools cookie flags (orh_sid HttpOnly + SameSite + Secure on HTTPS)
-2) DevTools response headers showing CSP/nosniff/frame deny
-3) Employee attempting to open someone else’s request → 403
-4) Upload of forbidden file type rejected (UI toast + audit log entry)
-5) Audit logs table showing REQUEST_CREATE / REQUEST_STATUS / UPLOAD_OK
-
----
-
-# 2-week intern activity plan (Joseph) — secure build checklist
-## Week 1
-Day 1:
-- [ ] Run migrations + seeds locally
-- [ ] Verify headers + cookies in DevTools
-Day 2:
-- [ ] Implement Change Password page (audit + validation)
-Day 3:
-- [ ] Add dashboard lists: Needs approval + My assigned
-Day 4:
-- [ ] Add request edit form for employees (OPEN/IN_REVIEW only)
-Day 5:
-- [ ] Capture Security Evidence Pack screenshots
-
-## Week 2
-Day 6:
-- [ ] Add server-side pagination for requests list
-Day 7:
-- [ ] Add close request resolution flow (requires comment)
-Day 8:
-- [ ] Add optional AV scanning hook integration point
-Day 9:
-- [ ] Add export request to PDF (server-generated)
-Day 10:
-- [ ] Final security review + release checklist
