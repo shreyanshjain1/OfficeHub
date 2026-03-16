@@ -1,0 +1,37 @@
+name: PHP CI
+
+on:
+  push:
+    branches: [main, develop, "**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  syntax-and-smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+
+      - name: Show PHP version
+        run: php -v
+
+      - name: Lint PHP files
+        run: |
+          find . -type f -name "*.php" -not -path "./.git/*" -print0 | while IFS= read -r -d '' file; do
+            php -l "$file"
+          done
+
+      - name: Validate .env.example exists
+        run: test -f .env.example
+
+      - name: Validate SQL files exist
+        run: |
+          test -f sql/001_schema.sql
+          test -f sql/002_seed.sql

@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest an improvement for OfficeHub
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      placeholder: Managers need a faster way to review urgent requests...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: Add dashboard widgets and request queue pagination...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Business or user benefit
+      placeholder: Faster triage, better visibility, lower admin overhead
+    validations:
+      required: true
