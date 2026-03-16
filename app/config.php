@@ -33,7 +33,7 @@ final class Config {
         if ($pos === false) continue;
         $k = trim(substr($line, 0, $pos));
         $v = trim(substr($line, $pos + 1));
-        $v = trim($v, ""'");
+        $v = trim($v, "\"'");
         if ($k !== '') self::$cfg[$k] = $v;
       }
     }
